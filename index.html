@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleHole WEB</title>
+    <link rel=stylesheet href="style.css">
+</head>
+
+<body>
+     <button id="theme-toggle-btn" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+    <main class="container">
+        </header>
+        <header>
+            <h1> <span>SimpleHole </span> - Calculadora de RPM</h1>
+        <div class="form-group">
+            <label for="material">
+                Material:
+            </label>
+        </div>
+
+        <select id="material">
+            <option value="1">Aço baixo carbono</option>
+            <option value="2">Aço médio carbono</option>
+            <option value="3">Aço duro</option>
+            <option value="4">Aço inoxidável</option>
+            <option value="5">Ferro fundido cinzento</option>
+            <option value="6">Ferro fundido nodular</option>
+            <option value="7">Alumínio</option>
+            <option value="8">Latão</option>
+            <option value="9">Cobre</option>
+            <option value="10">Plásticos</option>
+            <option value="11">Madeira Macia</option>
+            <option value="12">Madeira dura/MDF</option>
+        </select>
+        </div>
+        <div class="form-group">
+            <label for="broca">
+                Diâmetro da broca (mm):
+            </label>
+            <input type="number" id="broca" step="0.1" min="0">
+        </div>
+        <button onclick="calcularRPM()">
+            Calcular RPM
+        </button>
+        <h2 id="resultado"></h2>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>

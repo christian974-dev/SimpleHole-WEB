@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --label-color: #475569;
+    --input-bg: #f8fafc;
+    --input-border: #cbd5e1;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+}
+
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --label-color: #cbd5e1;
+    --input-bg: #334155;
+    --input-border: #475569;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 480px;
+    padding: 32px 24px;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+h1 span {
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--label-color);
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--input-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--primary-color);
+    background-color: var(--card-bg);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    width: auto;
+    margin-top: 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+}
